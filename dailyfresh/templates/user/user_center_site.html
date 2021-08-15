@@ -1,0 +1,39 @@
+
+{%extends 'df_user/base.html'%}
+{%block right_content %}
+<div class="right_content clearfix">
+	<h3 class="common_title2">Receiving address</h3>
+	<div class="site_con">
+	<dl>
+	<dt>Current address:</dt>
+	<dd>{{user.uaddress}} ({{user.ushou}} received) Tel: {{user.uphone}} Postcode: {{user.uyoubian}} </dd>
+	</dl>
+	</div>
+	<h3 class="common_title2">Edit address</h3>
+	<div class="site_con">
+	<form action="/user/site/" method="post">
+	{%csrf_token%}
+	<div class="form_group">
+	<label>Recipient:</label>
+	<input type="text" name="ushou" value="{{user.ushou}}">
+	</div>
+	<div class="form_group form_group2">
+	<label>Detailed address:</label>
+	<textarea class="site_area" name="uaddress">{{user.uaddress}}</textarea>
+	</div>
+	<div class="form_group">
+	<label>Postal code:</label>
+	<input type="text" name="uyoubian" value="{{user.uyoubian}}">
+	</div>
+	<div class="form_group">
+	<label>Mobile:</label>
+	<input type="text" name="uphone" value="{{user.uphone}}">
+	</div>
+	
+	<input type="submit" name="" value="Submit" class="info_submit">
+	</form>
+	</div>
+	</div>
+	</div>
+
+{%endblock right_content %}

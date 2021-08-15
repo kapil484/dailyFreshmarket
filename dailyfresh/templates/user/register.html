@@ -1,0 +1,62 @@
+{% extends 'base_foot.html' %}
+{% load static %}
+{% block head %}
+<script type="text/javascript" src="{% static  'js/register.js' %}"></script>
+
+{% endblock head %}
+
+
+{% block body %}
+	<div class="register_con">
+		<div class="l_con fl">
+			<a class="reg_logo"><img src="/static/images/logo02.png"></a>
+			<div class="reg_slogan">Staying at home, fresh every day</div>
+			<div class="reg_banner"></div>
+		</div>
+
+		<div class="r_con fr">
+			<div class="reg_title clearfix">
+				<h1>User registration</h1>
+				<a href="/user/login/">Log in</a>
+			</div>
+			<div class="reg_form clearfix">
+				<form action="/user/register_handle/" id="reg_form" method="post">
+                    {% csrf_token %}
+                    <ul>
+                        <li>
+                            <label>Username:</label>
+                            <input type="text" name="user_name" id="user_name">
+                            <span class="error_tip">Please enter a username of 5-20 characters</span>
+                        </li>
+                        <li>
+                            <label>Password:</label>
+                            <input type="password" name="pwd" id="pwd">
+                            <span class="error_tip">The password is at least 6 digits and the longest is</span>
+                        </li>
+                        <li>
+                            <label>Confirm Password:</label>
+                            <input type="password" name="cpwd" id="cpwd">
+                            <span class="error_tip">The two passwords entered are inconsistent</span>
+                        </li>
+                        <li>
+                            <label>Mail:</label>
+                            <input type="text" name="email" id="email">
+                            <span class="error_tip">The email format you entered is incorrect</span>
+                        </li>
+                        <li class="agreement">
+                            <input type="checkbox" name="allow" id="allow" checked="checked">
+                            <label>Agree to "Tiantian Fresh User Agreement"</label>
+                            <span class="error_tip2">Please tick agree</span>
+                        </li>
+                        <li class="reg_sub">
+                            <input  type="submit" value="register" name="">
+                           {#<button type="submit" value="register"></button>#}
+                        </li>
+                    </ul>
+				</form>
+			</div>
+
+		</div>
+
+	</div>
+{% endblock body %}

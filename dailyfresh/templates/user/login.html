@@ -1,0 +1,82 @@
+{% extends 'base_foot.html' %}
+{% block head %}
+    <script>
+    $(function () {
+        name_error=false
+        pwd_error=false
+        if($('.name_input').val().length!=0){
+            name_error = true
+        }
+        if($('.pwd_error').val().length!=0){
+            pwd_error = true
+        }
+
+        if({{ error_name }}== 1){
+            $('.user_error').html('Username error').show();
+        }
+        if({{ error_pwd }}== 1){
+            $('.pwd_error').html('Password error').show()
+        }
+        $('.name_input').blur(function () {
+            if($('.name_input').val().length==0){
+                $('.user_error').html('Please fill in the user name').show();
+                name_error=false;
+            }else {
+                $('.user_error').hide()
+                name_error=true;
+            }
+
+        })
+        $('.pass_input').blur(function () {
+            if($('.pass_input').val().length==0){
+                $('.pwd_error').html('Please write password').show();
+                pwd_error=false
+            }
+            else {$('.pwd_error').hide()
+                pwd_error=true}
+        })
+
+        $(":submit[id=lo]").click(function(check){
+            console.log(pwd_error,name_error)
+        if(pwd_error==false || name_error==false){
+           check.preventDefault();//Prevent form submission here
+        }
+    });
+
+    })
+    </script>
+{% endblock head %}
+{% block body %}
+<body>
+    <div class="login_top clearfix">
+    <a href="index.html" class="login_logo"><img src="/static/images/logo02.png"></a>
+    </div>
+    
+    <div class="login_form_bg">
+    <div class="login_form_wrap clearfix">
+    <div class="login_banner fl"></div>
+    <div class="slogan fl">Day and night, fast delivery</div>
+    <div class="login_form fr">
+    <div class="login_title clearfix">
+    <h1>User login</h1>
+    <a href="/user/register/">Register now</a>
+    </div>
+    <div class="form_input">
+    <form id="form" action="/user/login_handle/" method="post">
+                            {% csrf_token %}
+    <input type="text" name="username" class="name_input" value="{{ uname }}" placeholder="Please enter username">
+    <div class="user_error">Input error</div>
+    <input type="password" name="pwd" class="pass_input" placeholder="Please enter password">
+    <div class="pwd_error">Input error</div>
+    <div class="more_input clearfix">
+    <input type="checkbox" name="jizhu" value="1">
+    <label>Remember username</label>
+    <a href="#">Forgot your password</a>
+    </div>
+    <input id="lo" type="submit" name="" value="login" class="input_submit">
+    </form>
+    </div>
+    </div>
+    </div>
+    </div>
+{% endblock body %}

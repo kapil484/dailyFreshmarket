@@ -1,0 +1,27 @@
+/* Set the default spacing of the label to 0 */
+body,ul,ol,p,h1,h2,h3,h4,h5,h6,dl,dd,select,input,textarea,form{margin:0;padding:0}
+
+/* Let the h tag text size inherit the body text setting */
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+
+/* Remove the default icon in the list */
+ul,ol{list-style:none;}
+
+/* Remove the default italics of em */
+em{font-style: normal;}
+
+/* Remove the default underscore of the a tag */
+a{text-decoration:none;}
+
+
+/* Remove the frame line generated when adding a link */
+img{border:0;}
+
+/* Clear float */
+.clearfix:before,.clearfix:after{content:"";display:table}
+.clearfix:after{clear:both;}
+.clearfix{zoom:1}
+
+/* float */
+.fl{float:left}
+.fr{float:right}

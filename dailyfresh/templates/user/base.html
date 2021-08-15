@@ -1,0 +1,16 @@
+
+{% extends 'base.html' %}
+{% block body %}
+<div class="main_con clearfix">
+  <div class="left_menu_con clearfix">
+  <h3>User Center</h3>
+  <ul>
+    <li><a href="/user/info"{% if info %} class="active"{% endif %}>· Personal information</a></li>
+    <li><a href="/user/user_center_order&1/"{% if order %} class="active"{% endif %}>· All orders</a></li>
+    <li><a href="/user/site"{% if site %} class="active"{% endif %}>· Delivery address</a></li>
+  </ul>
+  </div>
+  {% block right_content %}
+  {% endblock right_content %}
+</div>
+{% endblock body %}
