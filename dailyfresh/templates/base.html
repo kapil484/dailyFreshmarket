@@ -7,21 +7,21 @@
         <div class="fr">
             {% if request.session.user_name %}
              <div class="user_link fl">
-                <a href="/user/info">Welcome to you: {{request.session.user_name}}</a>
+                <a href="{% url 'user:info' %}">Welcome to you: {{request.session.user_name}}</a>
                 <span>|</span>
-                 <a href="/logout/">Sign out</a>
+                 <a href="{% url 'user:logout'%}">Sign out</a>
                 <span>|</span>
-                <a href="/user/info">User Center</a>
+                <a href="{% url 'user:info' %}">User Center</a>
                 <span>|</span>
                 <a href="/cart/">My shopping cart</a>
                 <span>|</span>
-                <a href="/user/user_center_order&1/">My order</a>
+                <a href="{% url 'user:user_center_order' 1 %}">My order</a>
             </div>
             {% else %}
             <div class="login_btn fl">
-                <a href="/user/login/">Login</a>
+                <a href="{% url 'user:login' %}">Login</a>
                 <span>|</span>
-                <a href="/user/register">Register</a>
+                <a href="{% url 'user:register' %}">Register</a>
             </div>
             {% endif %}
 

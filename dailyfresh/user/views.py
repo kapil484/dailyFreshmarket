@@ -1,11 +1,12 @@
 from order.models import OrderInfo
 from goods.models import GoodsInfo
 from cart.models import CartInfo
-from hashlib import sha1
 from django.http.response import HttpResponse, HttpResponseRedirect, JsonResponse
 from django.shortcuts import redirect, render
 from .models import UserInfo
 from .islogin import islogin
+from django.core.paginator import Paginator
+
 
 # Create your views here.
 
@@ -102,7 +103,7 @@ def info(request):
 @islogin
 def order(request):
     context = {'title':'User Center','page_name':1,'order':1}
-    return render(request,'df_user/user_center_order.html', context)
+    return render(request,'user/user_center_order.html', context)
 
 
 # Shipping address
@@ -117,12 +118,12 @@ def site(request):
         user.uyoubian = post.get('uyoubian')
         user.save()
     context = {'title':'User Center','user': user,'page_name':1,'site':1}
-    return render(request,'df_user/user_center_site.html', context)
+    return render(request,'user/user_center_site.html', context)
 
 
 def logout(request):
     request.session.flush()
-    return redirect('/')
+    return redirect('/login/')
 
 
 @islogin
@@ -168,5 +169,5 @@ def user_center_order(request, pageid):
                'order': 1,'orderlist': orderlist,'plist': plist,
                'pre':qian1,'next':hou,'pree':qian2,'lenn':lenn,'nextt':hou2}
 
-    return render(request, 'df_user/user_center_order.html', context)
+    return render(request, 'user/user_center_order.html', context)
 

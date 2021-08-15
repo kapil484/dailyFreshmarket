@@ -25,10 +25,10 @@ urlpatterns = [
     path('register_exist/', views.register_exist),
     path('login_handle/', views.login_handle,name='login_handle'),
     path('login/', views.login,name='login'),
-    path('info/', views.info),
+    path('info/', views.info, name='info'),
     #url(r'^order/', views.order),
-    path('site/', views.site),
-    path('logout/', views.logout),
-    path('user_center_order/', views.user_center_order),
+    path('site/', views.site,name='site'),
+    path('logout/', views.logout,name='logout'),
+    path('user_center_order/<int:pageid>', views.user_center_order, name='user_center_order'),
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -1,5 +1,5 @@
 
-{%extends 'df_user/base.html'%}
+{%extends 'user/base.html'%}
 {%block right_content %}
 <div class="right_content clearfix">
 	<h3 class="common_title2">Receiving address</h3>
@@ -11,7 +11,7 @@
 	</div>
 	<h3 class="common_title2">Edit address</h3>
 	<div class="site_con">
-	<form action="/user/site/" method="post">
+	<form action="{% url 'user:site' %}" method="post">
 	{%csrf_token%}
 	<div class="form_group">
 	<label>Recipient:</label>

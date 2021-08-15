@@ -552,7 +552,7 @@ html,body{height:100%}
 }
 
 .user_info_list li span{
-	width:100px;
+	width:200px;
 	float:left;
 	text-align:right;
 }
