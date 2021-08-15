@@ -20,9 +20,9 @@ from . import views
 
 app_name='cart'
 urlpatterns = [
-    path('', views.cart),
-    path('add', views.add),
-    path('edit', views.edit),
-    path('delete', views.delete),
+    path('cart/', views.cart,name='cart'),
+    path('add/<int:gid>/<int:count>', views.add),
+    path('edit/<int:cart_id>/<int:count>', views.edit),
+    path('delete/<int:cart_id>', views.delete),
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

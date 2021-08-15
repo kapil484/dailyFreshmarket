@@ -16,7 +16,7 @@ def cart(request):
              'page_name':1,
              'carts':carts,
              'len':lenn}
-    return render(request,'df_cart/cart.html',context)
+    return render(request,'cart/cart.html',context)
 
 #Adding goods
 @islogin
