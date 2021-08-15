@@ -1,3 +1,6 @@
+from order.models import OrderInfo
+from goods.models import GoodsInfo
+from cart.models import CartInfo
 from hashlib import sha1
 from django.http.response import HttpResponse, HttpResponseRedirect, JsonResponse
 from django.shortcuts import redirect, render

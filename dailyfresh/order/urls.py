@@ -20,6 +20,8 @@ from . import views
 
 app_name='order'
 urlpatterns = [
-    
+    path('', views.order),
+    path('addorder/', views.order_handle),
+    path('pay/', views.pay),
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
