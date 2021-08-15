@@ -5,11 +5,11 @@
     <div class="header">
         <div class="welcome fl">Welcome to Tiantian Fresh!</div>
         <div class="fr">
-            {% if request.session.user_name|default:'' !='' %}
+            {% if request.session.user_name %}
              <div class="user_link fl">
                 <a href="/user/info">Welcome to you: {{request.session.user_name}}</a>
                 <span>|</span>
-                 <a href="/user/logout/">Sign out</a>
+                 <a href="/logout/">Sign out</a>
                 <span>|</span>
                 <a href="/user/info">User Center</a>
                 <span>|</span>
@@ -49,7 +49,7 @@
 
 
 
-  {% if request.session.user_name|default:'' !='' %}
+  {% if request.session.user_name %}
   <div class="guest_cart fr">
         <a href="/cart/" class="cart_name fl">My shopping cart</a>
         <div class="goods_count fl" id="show_count">{{count}}</div>

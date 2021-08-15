@@ -59,10 +59,10 @@
     <div class="login_form fr">
     <div class="login_title clearfix">
     <h1>User login</h1>
-    <a href="/user/register/">Register now</a>
+    <a href="{% url 'user:register'%}">Register now</a>
     </div>
     <div class="form_input">
-    <form id="form" action="/user/login_handle/" method="post">
+    <form id="form" action="{% url 'user:login_handle' %}" method="post">
                             {% csrf_token %}
     <input type="text" name="username" class="name_input" value="{{ uname }}" placeholder="Please enter username">
     <div class="user_error">Input error</div>

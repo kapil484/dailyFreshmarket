@@ -21,10 +21,10 @@ from . import views
 app_name='user'
 urlpatterns = [
     path('register/', views.register,name='register'),
-    path('register_handle/', views.register_handle),
+    path('register_handle/', views.register_handle,name='register_handle'),
     path('register_exist/', views.register_exist),
-    path('login_handle/', views.login_handle),
-    path('login/', views.login),
+    path('login_handle/', views.login_handle,name='login_handle'),
+    path('login/', views.login,name='login'),
     path('info/', views.info),
     #url(r'^order/', views.order),
     path('site/', views.site),

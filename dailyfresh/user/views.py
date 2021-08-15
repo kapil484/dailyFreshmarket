@@ -23,13 +23,10 @@ def register_handle(requst):
 
     if upwd != ucpwd:
         return redirect('/user/register/')
-    s1 = sha1()
-    s1.update(upwd)
-    upwd3 = s1.hexdigest()
 
     user = UserInfo()
     user.uname = uname
-    user.upwd = upwd3
+    user.upwd = upwd
     user.uemail = uemail
     user.save()
 
@@ -56,11 +53,9 @@ def login_handle(request):
     # print uname
     # Judge if the user name is not found, then the user name is wrong, if found, then judge whether the password is correct, then go to the user center
     if len(users) == 1:
-        s1 = sha1()
-        s1.update(upwd)
         #Login with cookie value must be red = HttpResponseRedirect red.set_cookie renturn red
-        if s1.hexdigest() == users[0].upwd:
-            red = HttpResponseRedirect('/user/info')
+        if upwd == users[0].upwd:
+            red = HttpResponseRedirect('/info')
             count = CartInfo.objects.filter(user_id=users[0].id).count()
 
             # print'*'*10
@@ -76,10 +71,10 @@ def login_handle(request):
             return red
         else:
             context = {'title':'User login','error_name': 0,'error_pwd': 1,'uname': uname}
-            return render(request,'df_user/login.html', context)
+            return render(request,'user/login.html', context)
     else:
         context = {'title':'User login','error_name': 1,'error_pwd': 0,'uname': uname}
-        return render(request,'df_user/login.html', context)
+        return render(request,'user/login.html', context)
 
 
 # Login User Center
@@ -95,12 +90,12 @@ def info(request):
         for goods_id in goods_id_list:
             goods_list.append(GoodsInfo.objects.get(id=int(goods_id)))
 
-    context = {'title': '用户中心',
+    context = {'title': 'User Center',
                'user_email': user_email,
                'user_name': request.session['user_name'],
                'page_name':1,'info':1,
                'goods_list':goods_list}
-    return render(request, 'df_user/user_center_info.html', context)
+    return render(request, 'user/user_center_info.html', context)
 
 
 # Order
