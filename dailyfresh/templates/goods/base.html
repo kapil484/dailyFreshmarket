@@ -4,34 +4,34 @@
 <div class="navbar_con">
     <div class="navbar clearfix">
         <div class="subnav_con fl">
-            <h1>全部商品分类</h1>
+            <h1>All product categories</h1>
             <span></span>
             <ul class="subnav">
-                <li><a href="/list1_1_1/" class="fruit">新鲜水果</a></li>
-                <li><a href="/list2_1_1/" class="seafood">海鲜水产</a></li>
-                <li><a href="/list3_1_1/" class="meet">猪牛羊肉</a></li>
-                <li><a href="/list4_1_1/" class="egg">禽类蛋品</a></li>
-                <li><a href="/list5_1_1/" class="vegetables">新鲜蔬菜</a></li>
-                <li><a href="/list6_1_1/" class="ice">速冻食品</a></li>
+                <li><a href="/list1_1_1/" class="fruit">Fresh fruit</a></li>
+                <li><a href="/list2_1_1/" class="seafood">Seafood and aquatic products</a></li>
+                <li><a href="/list3_1_1/" class="meet">Pig, Beef and Mutton</a></li>
+                <li><a href="/list4_1_1/" class="egg">Poultry and eggs</a></li>
+                <li><a href="/list5_1_1/" class="vegetables">Fresh vegetables</a></li>
+                <li><a href="/list6_1_1/" class="ice">Frozen food</a></li>
             </ul>
         </div>
         <ul class="navlist fl">
-            <li><a href="">首页</a></li>
+            <li><a href="">Home</a></li>
             <li class="interval">|</li>
-            <li><a href="">手机生鲜</a></li>
+            <li><a href="">Mobile phone fresh</a></li>
             <li class="interval">|</li>
-            <li><a href="">抽奖</a></li>
+            <li><a href="">lottery draw</a></li>
         </ul>
     </div>
 </div>
 {% if list == 1 %}
 <div class="breadcrumb">
-    <a href="/">全部分类</a>
+    <a href="/">All categories</a>
     <span>></span>
     <a href="/list{{goodtype.id}}_1_1/">{{goodtype.ttitle}}</a>
     {% if isDetail %}
     <span>></span>
-    <a href="">商品详情</a>
+    <a href="">Product details</a>
     {% endif %}
 </div>
 {% endif %}
@@ -42,7 +42,7 @@
 <div class="main_wrap clearfix">
     <div class="l_wrap fl clearfix">
         <div class="new_goods">
-            <h3>新品推荐</h3>
+            <h3>New product recommendation</h3>
             <ul>
                 {%for g in newgood%}
                 <li>
@@ -61,17 +61,17 @@
 
 {%block foot%}
 <div class="footer">
-		<div class="foot_link">
-			<a href="#">关于我们</a>
-			<span>|</span>
-			<a href="#">联系我们</a>
-			<span>|</span>
-			<a href="#">招聘人才</a>
-			<span>|</span>
-			<a href="#">友情链接</a>
-		</div>
-		<p>CopyRight © 2016 北京天天生鲜信息技术有限公司 All Rights Reserved</p>
-		<p>电话：010-****888    京ICP备*******8号</p>
+    <div class="foot_link">
+        <a href="#">About us</a>
+        <span>|</span>
+        <a href="#">Contact us</a>
+        <span>|</span>
+        <a href="#">Recruiting talents</a>
+        <span>|</span>
+        <a href="#">Friendly link</a>
+        </div>
+        <p>CopyRight © 2016 Beijing Tiantian Fresh Information Technology Co., Ltd. All Rights Reserved</p>
+        <p>Tel: 010-****888 Beijing ICP No. *******8</p>
 	</div>
 {#	<script type="text/javascript" src="js/slideshow.js"></script>#}
 {#	<script type="text/javascript">#}
