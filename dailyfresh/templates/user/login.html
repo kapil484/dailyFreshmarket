@@ -49,34 +49,37 @@
 {% block body %}
 <body>
     <div class="login_top clearfix">
-    <a href="index.html" class="login_logo"><img src="/static/images/logo02.png"></a>
+        <a href="index.html" class="login_logo"><img src="/static/images/logo02-removebg-preview.png" height="150" ></a>
+        <p class="logo_text">Natural</p>
     </div>
     
     <div class="login_form_bg">
-    <div class="login_form_wrap clearfix">
-    <div class="login_banner fl"></div>
-    <div class="slogan fl">Day and night, fast delivery</div>
-    <div class="login_form fr">
-    <div class="login_title clearfix">
-    <h1>User login</h1>
-    <a href="{% url 'user:register'%}">Register now</a>
-    </div>
-    <div class="form_input">
-    <form id="form" action="{% url 'user:login_handle' %}" method="post">
-                            {% csrf_token %}
-    <input type="text" name="username" class="name_input" value="{{ uname }}" placeholder="Please enter username">
-    <div class="user_error">Input error</div>
-    <input type="password" name="pwd" class="pass_input" placeholder="Please enter password">
-    <div class="pwd_error">Input error</div>
-    <div class="more_input clearfix">
-    <input type="checkbox" name="jizhu" value="1">
-    <label>Remember username</label>
-    <a href="#">Forgot your password</a>
-    </div>
-    <input id="lo" type="submit" name="" value="login" class="input_submit">
-    </form>
-    </div>
-    </div>
-    </div>
+        <div class="login_form_wrap clearfix">
+            <div class="login_banner fl clearfix">
+                <img src="/static/images/shipping-removebg-preview.png" height="225" width="210" style="padding: 155px 0 0 185px;">
+            </div>
+            <div class="slogan fl">Day and night, fast delivery</div>
+            <div class="login_form fr">
+                <div class="login_title clearfix">
+                    <h1>User login</h1>
+                        <a href="{% url 'user:register'%}">Register now</a>
+                </div>
+                <div class="form_input">
+                    <form id="form" action="{% url 'user:login_handle' %}" method="post">
+                                {% csrf_token %}
+                        <input type="text" name="username" class="name_input" value="{{ uname }}" placeholder="Please enter username">
+                        <div class="user_error">Input error</div>
+                        <input type="password" name="pwd" class="pass_input" placeholder="Please enter password">
+                        <div class="pwd_error">Input error</div>
+                        <div class="more_input clearfix">
+                        <input type="checkbox" name="jizhu" value="1">
+                        <label>Remember username</label>
+                        <a href="#">Forgot your password</a>
+                        </div>
+                        <input id="lo" type="submit" name="" value="login" class="input_submit">
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 {% endblock body %}

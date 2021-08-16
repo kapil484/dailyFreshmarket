@@ -9,7 +9,8 @@
 {% block body %}
 	<div class="register_con">
 		<div class="l_con fl">
-			<a class="reg_logo"><img src="/static/images/logo02.png"></a>
+			<a href="index.html" class="login_logo"><img src="/static/images/logo02-removebg-preview.png" height="150" ></a>
+            <p class="logo_text">Natural</p>
 			<div class="reg_slogan">Staying at home, fresh every day</div>
 			<div class="reg_banner"></div>
 		</div>
@@ -17,7 +18,7 @@
 		<div class="r_con fr">
 			<div class="reg_title clearfix">
 				<h1>User registration</h1>
-				<a href="{% url 'user:login' %}">Log in</a>
+				<a href="{% url 'user:login' %}">Log in </a>
 			</div>
 			<div class="reg_form clearfix">
 				<form action="{% url 'user:register_handle' %}" id="reg_form" method="post">
@@ -34,7 +35,7 @@
                             <span class="error_tip">The password is at least 6 digits and the longest is</span>
                         </li>
                         <li>
-                            <label>Confirm Password:</label>
+                            <label>Password2:</label>
                             <input type="password" name="cpwd" id="cpwd">
                             <span class="error_tip">The two passwords entered are inconsistent</span>
                         </li>

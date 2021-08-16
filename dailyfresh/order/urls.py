@@ -20,7 +20,7 @@ from . import views
 
 app_name='order'
 urlpatterns = [
-    path('', views.order),
+    path('order/', views.order),
     path('addorder/', views.order_handle),
     path('pay/', views.pay),
 ]

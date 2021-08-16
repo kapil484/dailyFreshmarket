@@ -42,7 +42,7 @@ def order(request):
     context = {'title':'Submit order','page_name': 1,'orderlist': orderlist,
                'user': user, 'ureceive_phone': uphone}
 
-    return render(request, 'df_order/place_order.html', context)
+    return render(request, 'order/place_order.html', context)
 
 
 #--------------------------------------------What decorator? ->Transaction Once one operation fails, all operations will be rolled back

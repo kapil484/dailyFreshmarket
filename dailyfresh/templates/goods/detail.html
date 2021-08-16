@@ -16,7 +16,7 @@ $(function(){
        price = {{ g.gprice }};
 		//Subtotal
        total01 = parseInt(count) * parseFloat(price);
-       $('#gtotal').text(total01.toFixed(2)+'元');
+       $('#gtotal').text(total01.toFixed(2)+'Yuan');
 
    };
    function kucun() {
@@ -119,18 +119,18 @@ $(function(){
 {% endblock detail%}
 
 {% block list %}
-		<div class="r_wrap fr clearfix">
-			<ul class="detail_tab clearfix">
-				<li class="active">商品介绍</li>
-				<li>评论</li>
-			</ul>
-
-			<div class="tab_content">
-				<dl>
-					<dt>商品详情：</dt>
-					<dd>{{g.gcontent|safe}}</dd>
-				</dl>
-			</div>
-
-		</div>
+<div class="r_wrap fr clearfix">
+  <ul class="detail_tab clearfix">
+  <li class="active">Product introduction</li>
+  <li>Comment</li>
+  </ul>
+  
+  <div class="tab_content">
+  <dl>
+  <dt>Product details:</dt>
+  <dd>{{g.gcontent|safe}}</dd>
+  </dl>
+  </div>
+  
+  </div>
 {% endblock list %}

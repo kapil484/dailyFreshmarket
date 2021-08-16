@@ -25,32 +25,32 @@
 {%block body%}
 	<div class="navbar_con">
 		<div class="navbar">
-			<h1 class="fl">全部商品分类</h1>
+			<h1 class="fl">All product categories</h1>
 			<ul class="navlist fl">
-				<li><a href="/">首页</a></li>
+				<li><a href="/">Home</a></li>
 				<li class="interval">|</li>
-				<li><a href="#">手机生鲜</a></li>
+				<li><a href="#">Mobile phone fresh</a></li>
 				<li class="interval">|</li>
-				<li><a href="#">抽奖</a></li>
+				<li><a href="#">Lucky draw</a></li>
 			</ul>
 		</div>
 	</div>
 
 	<div class="center_con clearfix">
 		<ul class="subnav fl">
-			<li><a href="#model01" class="fruit">新鲜水果</a></li>
-			<li><a href="#model02" class="seafood">海鲜水产</a></li>
-			<li><a href="#model03" class="meet">猪牛羊肉</a></li>
-			<li><a href="#model04" class="egg">禽类蛋品</a></li>
-			<li><a href="#model05" class="vegetables">新鲜蔬菜</a></li>
-			<li><a href="#model06" class="ice">速冻食品</a></li>
+			<li><a href="#model01" class="fruit">Fresh fruit</a></li>
+			<li><a href="#model02" class="seafood">Seafood and aquatic products</a></li>
+			<li><a href="#model03" class="meet">Pig, Beef and Mutton</a></li>
+			<li><a href="#model04" class="egg">Poultry and eggs</a></li>
+			<li><a href="#model05" class="vegetables">Fresh vegetables</a></li>
+			<li><a href="#model06" class="ice">Frozen food</a></li>
 		</ul>
 		<div class="slide fl">
 			<ul class="slide_pics">
-				<li><img src="/static/images/slide.jpg" alt="幻灯片"></li>
-				<li><img src="/static/images/slide02.jpg" alt="幻灯片"></li>
-				<li><img src="/static/images/slide03.jpg" alt="幻灯片"></li>
-				<li><img src="/static/images/slide04.jpg" alt="幻灯片"></li>
+				<li><img src="/static/images/slide.jpg" alt=" slideshow"></li>
+				<li><img src="/static/images/slide02.jpg" alt=" slideshow"></li>
+				<li><img src="/static/images/slide03.jpg" alt=" slideshow"></li>
+				<li><img src="/static/images/slide04.jpg" alt=" slideshow"></li>
 			</ul>
 			<div class="prev"></div>
 			<div class="next"></div>
@@ -64,14 +64,14 @@
 
 	<div class="list_model">
 		<div class="list_title clearfix">
-			<h3 class="fl" id="model01">新鲜水果</h3>
+			<h3 class="fl" id="model01">fresh fruits</h3>
 			<div class="subtitle fl">
 				<span>|</span>
 				{%for g in fruit2%}
 				<a href="/{{g.id}}">{{g.gtitle|slice:'10'}}...</a>
 				{%endfor%}
 			</div>
-			<a href="/list2_1_1" class="goods_more fr" id="fruit_more">查看更多 ></a>
+			<a href="/list2_1_1" class="goods_more fr" id="fruit_more">see more</a>
 		</div>
 
 		<div class="goods_con clearfix">
@@ -91,14 +91,14 @@
 
 	<div class="list_model">
 		<div class="list_title clearfix">
-			<h3 class="fl" id="model02">海鲜水产</h3>
+			<h3 class="fl" id="model02">Seafood</h3>
 			<div class="subtitle fl">
 				<span>|</span>
 				{%for g in fish2%}
 				<a href="/{{g.id}}">{{g.gtitle|slice:'10'}}...</a>
 				{%endfor%}
 			</div>
-			<a href="/list4_1_1" class="goods_more fr">查看更多 ></a>
+			<a href="/list4_1_1" class="goods_more fr">View more</a>
 		</div>
 
 		<div class="goods_con clearfix">
@@ -117,14 +117,14 @@
 
 	<div class="list_model">
 		<div class="list_title clearfix">
-			<h3 class="fl" id="model03">猪牛羊肉</h3>
+			<h3 class="fl" id="model03">Pork, Beef and Mutton</h3>
 			<div class="subtitle fl">
 				<span>|</span>
 				{%for g in meat%}
 				<a href="/{{g.id}}">{{g.gtitle|slice:'10'}}...</a>
 				{%endfor%}
 			</div>
-			<a href="/list1_1_1" class="goods_more fr">查看更多 ></a>
+			<a href="/list1_1_1" class="goods_more fr">see more</a>
 		</div>
 
 		<div class="goods_con clearfix">
@@ -143,14 +143,14 @@
 
 	<div class="list_model">
 		<div class="list_title clearfix">
-			<h3 class="fl" id="model04">禽类蛋品</h3>
+			<h3 class="fl" id="model04">Poultry eggs</h3>
 			<div class="subtitle fl">
 				<span>|</span>
 				{%for g in egg%}
 				<a href="/{{g.id}}">{{g.gtitle|slice:'10'}}...</a>
 				{%endfor%}
 			</div>
-			<a href="/list5_1_1" class="goods_more fr">查看更多 ></a>
+			<a href="/list5_1_1" class="goods_more fr">see more ></a>
 		</div>
 
 		<div class="goods_con clearfix">
@@ -169,14 +169,14 @@
 
 	<div class="list_model">
 		<div class="list_title clearfix">
-			<h3 class="fl" id="model05">新鲜蔬菜</h3>
+			<h3 class="fl" id="model05">fresh vegetables</h3>
 			<div class="subtitle fl">
 				<span>|</span>
 				{%for g in vegetables%}
 				<a href="/{{g.id}}">{{g.gtitle|slice:'10'}}...</a>
 				{%endfor%}
 			</div>
-			<a href="/list2_1_1" class="goods_more fr">查看更多 ></a>
+			<a href="/list2_1_1" class="goods_more fr">see more ></a>
 		</div>
 
 		<div class="goods_con clearfix">
@@ -195,14 +195,14 @@
 
 	<div class="list_model">
 		<div class="list_title clearfix">
-			<h3 class="fl" id="model06">速冻食品</h3>
+			<h3 class="fl" id="model06">Frozen food</h3>
 			<div class="subtitle fl">
 				<span>|</span>
 				{%for g in frozen%}
 				<a href="/{{g.id}}">{{g.gtitle|slice:'10'}}...</a>
 				{%endfor%}
 			</div>
-			<a href="/list6_1_1" class="goods_more fr">查看更多 ></a>
+			<a href="/list6_1_1" class="goods_more fr">see more ></a>
 		</div>
 
 		<div class="goods_con clearfix">
@@ -224,16 +224,16 @@
 {%block foot%}
 <div class="footer">
 		<div class="foot_link">
-			<a href="#">关于我们</a>
+			<a href="#">About us</a>
 			<span>|</span>
-			<a href="#">联系我们</a>
+			<a href="#">Contact us</a>
 			<span>|</span>
-			<a href="#">招聘人才</a>
+			<a href="#">Recruiting talents</a>
 			<span>|</span>
-			<a href="#">友情链接</a>
+			<a href="#">Friendly link</a>
 		</div>
-		<p>CopyRight © 2016 北京天天生鲜信息技术有限公司 All Rights Reserved</p>
-		<p>电话：010-****888    京ICP备*******8号</p>
+		<p>CopyRight © 2016 Beijing Tiantian Fresh Information Technology Co., Ltd. All Rights Reserved</p>
+		<p>Tel: 010-****888 Beijing ICP No. *******8</p>
 	</div>
 	<script type="text/javascript" src="js/slideshow.js"></script>
 	<script type="text/javascript">

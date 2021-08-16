@@ -35,7 +35,7 @@ def index(request):
                'guest_cart': 1,'page_name':0,'count':count}
 
     # Return to the rendering template
-    return render(request, 'df_goods/index.html', context)
+    return render(request, 'goods/index.html', context)
 
 
 #Product List
@@ -75,7 +75,7 @@ def goodlist(request, typeid, pageid, sort):
                'pindexlist': pindexlist,'pageid': int(pageid),'count':count}
 
     # Render the return result
-    return render(request, 'df_goods/list.html', context)
+    return render(request, 'goods/list.html', context)
 
 
 def detail(request,id):
@@ -98,7 +98,7 @@ def detail(request,id):
     context={'title':goods.gtype.ttitle,'guest_cart':1,
              'g':goods,'newgood':news,'id':id,
              'isDetail': True,'list':1,'goodtype': goodtype,'count':count}
-    response=render(request,'df_goods/detail.html',context)
+    response=render(request,'goods/detail.html',context)
 
 
     #Use cookies to record recently viewed product id
